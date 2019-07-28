@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ABC University</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./js/marklist.js"></script>
+    <style>
+        .datas{
+            height: 100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="applicationfront" style="background-color: bisque;">        
+        <div class="page-header" style="background-color:cornflowerblue">
+            <h1 class="display-2">ABC University</h1>
+        </div>
+        <form id="myform" style="display: block; padding: 20px;"  onsubmit="return (validateForm());">
+            <div class="form-group" id="studentname">
+                <label for="sname">Name of the student:</label>
+                <input type="text" name="sname" class="form-control" id="sname" pattern="[A-Za-z]" required /> 
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6" id="semstudents">
+                    <label for="semstudent">Semester:</label>
+                    <select class="form-control" id="semstudent">
+                        <option value="Semester 1">Semester 1</option>
+                        <option value="Semester 2">Semester 2</option>
+                        <option value="Semester 3">Semester 3</option>
+                        <option value="Semester 4">Semester 4</option>
+                        <option value="Semester 5">Semester 5</option>
+                        <option value="Semester 6">Semester 6</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6" id="secode">
+                    <label for="ecode">Exam Code:</label>
+                    <input type="number" class="form-control" id="ecode" pattern="[6-7]{1};[0-9]{5}" required />
+                    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>            
+                    <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <label for="subj">Subject</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <label for="fetchedmarks">Marks obtained</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <label for="totalmarks">Total marks</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb0">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm0" value="0">   
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm0" value="0"> 
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb1">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm1" value="0"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm1" value="0"> 
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb2">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm2" value="0"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm2" value="0">  
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb3">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm3" value="0"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm3" value="0"> 
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb4">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm4" value="0"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm4" value="0"> 
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="sb5">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="fm5" value="0"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="tm5" value="0"> 
+                                </div>
+                            </div>                
+                        </div>
+                        <button type="button" class="btn btn-info" onclick="getMarkList();">Generate marklist</button>
+                    </form>    
+        
+            
+    </div>
+    <div class="container" style="display:none" id="marksheet">
+            <div class="page-header" style="background-color:cornflowerblue">
+                    <h1 class="display-2">Mark Sheet</h1>
+                </div>
+                <div class="detdisplay" style="background-color: goldenrod;">
+                        <div class="form-row">
+                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                        <label for="dsname" class="font-weight-bold">Name:</label>
+                                        <span class="namevalue" id="dsname"></span>
+                                </div>
+                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                        <label for="dsem" class="font-weight-bold">Semester:</label>
+                                        <span class="namevalue" id="dsem"></span>
+                                </div>
+                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                        <label for="decode" class="font-weight-bold">Exam code:</label>
+                                        <span class="namevalue" id="decode"></span>
+                                </div>            
+                            </div>
+                </div>
+            
+            <div class="tbdisplay" style="background-color: darkkhaki;">
+                    <h2 class="display-4">Mark List</h2>
+                    <table class="table-striped table-bordered table-responsive" style="width: 100%; height:100%;">
+                        <thead>
+                          <tr class="datas">
+                            <th>No.</th>
+                            <th>Subject</th>
+                            <th>Marks Obtained</th>
+                            <th>Total Marks</th>
+                            <th>Grade</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="entry0" class="datas">
+                                 <td>1.</td>
+                                 <td id="sn0"></td>
+                                 <td id="mk0"></td>
+                                 <td id="ttm0"></td>
+                                 <td id="gr0"></td>
+                            </tr>
+                            <tr id="entry1" class="datas">
+                                    <td>2.</td>
+                                    <td id="sn1"></td>
+                                    <td id="mk1"></td>
+                                    <td id="ttm1"></td>
+                                    <td id="gr1"></td>
+                            </tr>
+                            <tr id="entry2" class="datas">
+                                    <td>3.</td>
+                                    <td id="sn2"></td>
+                                    <td id="mk2"></td>
+                                    <td id="ttm2"></td>
+                                    <td id="gr2"></td>
+                            </tr>
+                            <tr id="entry3" class="datas">
+                                    <td>4.</td>
+                                    <td id="sn3"></td>
+                                    <td id="mk3"></td>
+                                    <td id="ttm3"></td>
+                                    <td id="gr3"></td>
+                            </tr>
+                            <tr id="entry4" class="datas">
+                                    <td>5.</td>
+                                    <td id="sn4"></td>
+                                    <td id="mk4"></td>
+                                    <td id="ttm4"></td>
+                                    <td id="gr4"></td>
+                            </tr>
+                            <tr id="entry5" class="datas">
+                                    <td>6.</td>
+                                    <td id="sn5"></td>
+                                    <td id="mk5"></td>
+                                    <td id="ttm5"></td>
+                                    <td id="gr5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-centre" style="padding:30px;">
+                        <b>Status:</b>
+                        <span id="stat"></span>
+                    </div>
+            </div>
+            
+        </div>
+</body>
+</html>
