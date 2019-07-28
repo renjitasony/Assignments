@@ -6,20 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ABC University</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./js/marklist.js"></script>
-    <style>
-        .datas{
-            height: 100%;
-            width:100%;
-        }
-    </style>
+    <link rel="stylesheet" href="../htmlcss/css/style.css">
+    <script src="./js/marklist.js"></script>    
 </head>
 <body>
-    <div class="container" id="applicationfront" style="background-color: bisque;">        
-        <div class="page-header" style="background-color:cornflowerblue">
+    <div class="container" id="applicationfront">        
+        <div class="page-header" id="headerm1"  >
             <h1 class="display-2">ABC University</h1>
         </div>
-        <form id="myform" style="display: block; padding: 20px;"  onsubmit="return (validateForm());">
+        <form id="myform" onsubmit="return (validateForm());">
             <div class="form-group" id="studentname">
                 <label for="sname">Name of the student:</label>
                 <input type="text" name="sname" class="form-control" id="sname" pattern="[A-Za-z]" required /> 
@@ -38,9 +33,7 @@
                 </div>
                 <div class="form-group col-md-6" id="secode">
                     <label for="ecode">Exam Code:</label>
-                    <input type="number" class="form-control" id="ecode" pattern="[6-7]{1};[0-9]{5}" required />
-                    <div class="valid-feedback">Valid.</div>
-    <div class="invalid-feedback">Please fill out this field.</div>
+                    <input type="number" class="form-control" id="ecode" pattern="[6-7]{1};[0-9]{5}" required />                    
                 </div>
             </div>            
                     <div class="form-row">
@@ -96,7 +89,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <div class="col">
+                                <div class="col"> 
                                     <input type="text" class="form-control" id="sb2">
                                 </div>
                             </div>
@@ -167,30 +160,30 @@
         
             
     </div>
-    <div class="container" style="display:none" id="marksheet">
-            <div class="page-header" style="background-color:cornflowerblue">
+    <div class="container"  id="marksheet">
+                <div class="page-header" id="headerm2">
                     <h1 class="display-2">Mark Sheet</h1>
                 </div>
-                <div class="detdisplay" style="background-color: goldenrod;">
+                <div class="detdisplay">
                         <div class="form-row">
-                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                <div class="form-group col-md-4" id="detdisp">
                                         <label for="dsname" class="font-weight-bold">Name:</label>
                                         <span class="namevalue" id="dsname"></span>
                                 </div>
-                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                <div class="form-group col-md-4" id="detdisp">
                                         <label for="dsem" class="font-weight-bold">Semester:</label>
                                         <span class="namevalue" id="dsem"></span>
                                 </div>
-                                <div class="form-group col-md-4" style="font-size: 20px;">
+                                <div class="form-group col-md-4" id="detdisp">
                                         <label for="decode" class="font-weight-bold">Exam code:</label>
                                         <span class="namevalue" id="decode"></span>
                                 </div>            
                             </div>
                 </div>
             
-            <div class="tbdisplay" style="background-color: darkkhaki;">
+            <div class="tbdisplay">
                     <h2 class="display-4">Mark List</h2>
-                    <table class="table-striped table-bordered table-responsive" style="width: 100%; height:100%;">
+                    <table class="table-striped table-bordered" id="tableones">
                         <thead>
                           <tr class="datas">
                             <th>No.</th>
@@ -245,7 +238,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="text-centre" style="padding:30px;">
+                    <div class="text-centre" style="" id="passstatus">
                         <b>Status:</b>
                         <span id="stat"></span>
                     </div>

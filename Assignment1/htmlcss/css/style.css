@@ -1,0 +1,52 @@
+td{
+    text-align: center;
+}
+body{
+    background-color: black;
+}
+form{
+    display: block;
+    padding: 20px;
+}
+#applicationfront{
+    background-color: rgb(202, 176, 120); 
+    padding: 30px;
+     margin-top: 50px;
+      border-radius: 20px;
+}
+#headerm1{
+    background-color:rgb(200, 160, 216);
+    border-radius: 20px;
+}
+#headerm2{
+    background-color:cornflowerblue; 
+    border: 2px solid darkgray;
+}
+#marksheet{
+    display:none;
+    margin-top: 50px; 
+    background-color: black;
+
+}
+#detdisp{
+    font-size: 20px;
+}
+#tableones{
+    height: 100%;
+    width: 100%;
+}
+#passstatus{
+    padding:30px; 
+    font-size: larger;
+}
+.datas{
+    height: 100%;
+    width:100%;
+}
+.detdisplay{
+    background-color: goldenrod;
+}
+.tbdisplay{
+    background-color: darkkhaki;
+    margin-left: 0px;
+}
